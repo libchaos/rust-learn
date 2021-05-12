@@ -49,3 +49,22 @@ pub fn rect_test() {
 
   print(rect);
 }
+
+
+enum BookFormat {
+  Paper,
+  Ebook,
+  Hardback,
+}
+
+struct Book {
+  isbn: usize,
+  format: BookFormat,
+}
+
+
+impl PartialEq for Book {
+  fn eq(&self, other: &Self) -> bool{
+    self.isbn == other.isbn
+  }
+}
